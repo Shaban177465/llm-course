@@ -51,6 +51,7 @@ Add your API key in `.env`:
 ```
 OPENAI_API_KEY=your-key-here
 ```
-
+## Live Demo
+🚀 [Try the Chatbot](https://llm-course-h9zdhdsh5poottpuvuteia.streamlit.app)
 ## Contact
 Ahmed Shaban — LLM Engineer
