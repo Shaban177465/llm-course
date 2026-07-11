@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic White T-Shirt",
+      "category": "T-Shirts",
+      "price": 29.99,
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["White", "Black", "Gray"],
+      "description": "Premium cotton t-shirt, perfect for casual wear",
+      "in_stock": true
+    },
+    {
+      "id": 2,
+      "name": "Slim Fit Jeans",
+      "category": "Pants",
+      "price": 79.99,
+      "sizes": ["28", "30", "32", "34", "36"],
+      "colors": ["Blue", "Black", "Dark Gray"],
+      "description": "Modern slim fit jeans with stretch fabric",
+      "in_stock": true
+    },
+    {
+      "id": 3,
+      "name": "Floral Summer Dress",
+      "category": "Dresses",
+      "price": 59.99,
+      "sizes": ["XS", "S", "M", "L"],
+      "colors": ["Pink", "Yellow", "Blue"],
+      "description": "Light and elegant summer dress with floral pattern",
+      "in_stock": true
+    },
+    {
+      "id": 4,
+      "name": "Leather Jacket",
+      "category": "Jackets",
+      "price": 199.99,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Black", "Brown"],
+      "description": "Genuine leather jacket, timeless style",
+      "in_stock": false
+    },
+    {
+      "id": 5,
+      "name": "Running Sneakers",
+      "category": "Shoes",
+      "price": 89.99,
+      "sizes": ["38", "39", "40", "41", "42", "43", "44"],
+      "colors": ["White", "Black", "Red"],
+      "description": "Lightweight sneakers for sports and casual wear",
+      "in_stock": true
+    }
+  ]
+}

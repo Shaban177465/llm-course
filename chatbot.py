@@ -23,17 +23,17 @@ def chat(history, user_message, system="أنت مساعد مفيد"):
 
 # ================================
 if __name__ == "__main__":
-    print("=== Chatbot شغال — اكتب 'خروج' للخروج ===\n")
+    print("=== AI Chatbot is running — type 'exit' to quit ===\n")
 
     history: list[dict[str, str]] = []
-    system = "أنت مساعد ذكى لقناة يوتيوب علمية اسمها فى 8 دقائق. بتساعد في أفكار المحتوى."
+    system = "You are a helpful AI assistant"
 
     while True:
-        user_input = input("أنت: ")
+        user_input = input("You: ")
 
-        if user_input == "خروج":
+        if user_input == "exit":
             print("مع السلامة!")
             break
 
         response, history = chat(history, user_input, system)
-        print(f"البوت: {response}\n")
+        print(f"Bot: {response}\n")
