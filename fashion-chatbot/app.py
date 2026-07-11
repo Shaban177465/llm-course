@@ -8,7 +8,9 @@ _ = load_dotenv(find_dotenv())
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 # تحميل المنتجات
-with open("products.json", "r") as f:
+import os
+base_dir = os.path.dirname(__file__)
+with open(os.path.join(base_dir, "products.json"), "r") as f:
     products_data = json.load(f)
 
 products_text = json.dumps(products_data, indent=2)
