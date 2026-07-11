@@ -62,3 +62,38 @@ Our Product Catalog:
     st.session_state.messages.append({"role": "assistant", "content": answer})
     with st.chat_message("assistant"):
         st.write(answer)
+        
+# سلة المشتريات
+if "cart" not in st.session_state:
+    st.session_state.cart = []
+
+# عرض السلة في الـ Sidebar
+with st.sidebar:
+    st.title("🛒 Your Cart")
+    if st.session_state.cart:
+        total = 0
+        for item in st.session_state.cart:
+            st.write(f"✅ {item['name']} — ${item['price']}")
+            total += item['price']
+        st.divider()
+        st.write(f"**Total: ${total:.2f}**")
+        if st.button("Clear Cart"):
+            st.session_state.cart = []
+    else:
+        st.write("Your cart is empty")
+
+# زرار إضافة للسلة تحت كل منتج
+st.divider()
+st.subheader("🛍️ Quick Add to Cart")
+for product in products_data["products"]:
+    if product["in_stock"]:
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.write(f"{product['name']} — ${product['price']}")
+        with col2:
+            if st.button("Add", key=f"add_{product['id']}"):
+                st.session_state.cart.append({
+                    "name": product["name"],
+                    "price": product["price"]
+                })
+                st.success("Added!")
